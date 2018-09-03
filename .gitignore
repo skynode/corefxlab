@@ -266,3 +266,9 @@ binaries/
 
 # Do not exclude any external files
 !external/**/*
+
+# Do not include these files
+*.zip
+
+# Do not include launch settings
+launchSettings.json

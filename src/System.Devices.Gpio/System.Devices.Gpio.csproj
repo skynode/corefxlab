@@ -1,13 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\tools\common.props" />
   <PropertyGroup>
-    <Description></Description>
-    <TargetFramework>netstandard1.5</TargetFramework>
+    <Description>This experimental package allows projects to access GPIO pins for the BCM2835 as used on Raspberry Pi.</Description>
+    <Copyright>Microsoft Corporation, All rights reserved.</Copyright>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PackageTags>Command line parsing support corefxlab</PackageTags>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <PackageTags>.NET Core GPIO Pins BCM2835 Raspberry Pi IoT</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="System\**\*.*" />
+    <Compile Remove="Documentation\GPIORef.cs" />
+    <Compile Remove="Documentation\GPIOSamples.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\GPIORef.cs" />
+    <None Include="Documentation\GPIOSamples.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.1" />
   </ItemGroup>
 </Project>
